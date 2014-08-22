@@ -59,7 +59,6 @@ public class HeapBasedPriorityQueue<T extends Comparable<T>> implements Queueabl
 	{
 		if(index > heap.size() / 2)
 		{
-			//throw new IllegalArgumentException("Position has no left child: " + index);
 			return null;
 		}
 		return 2 * index + 1;
@@ -69,7 +68,6 @@ public class HeapBasedPriorityQueue<T extends Comparable<T>> implements Queueabl
 	{
 		if(index >= heap.size() / 2)
 		{
-			//throw new IllegalArgumentException("Position has no right child: " + index);
 			return null;
 		}
 
@@ -121,12 +119,7 @@ public class HeapBasedPriorityQueue<T extends Comparable<T>> implements Queueabl
 			return null;
 		}
 		
-		if (index == (heap.size() - 1))
-		{
-			
-			//heap.remove(heap.get(index));
-		}
-		else
+		if (index != (heap.size() - 1))
 		{
 			heap.swap(index, heap.size() - 1);
 			
